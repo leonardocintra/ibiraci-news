@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} {{ article.title|safe}} {% endblock %}
+{% block content %}
+<article>
+	<header>
+		<h1>{{ article.title|safe }}</h1>
+		<div>
+			<time pubdate>{{ article.pub_date }}</time>
+			<address>
+				Por <a rel="author" href="#">{{ article.authors.all }}</a>
+			</address>
+		</div>
+	</header>
+	<div>
+		<p>
+			{{ article.content|safe }}
+		</p>
+	</div>
+</article>
+{% endblock %}
+{% block back %}
+	<a href="/">Voltar</a>
+{% endblock %}

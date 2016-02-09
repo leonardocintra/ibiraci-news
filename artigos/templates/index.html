@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if articles %}
+	<ul>
+		{% for article in articles %}
+		<li>
+			<h1><a href="/article/{{ article.url }}">{{ article.title|safe }}</a></h1>
+			<br	/>
+			<span>{{ article.pub_date }}</span>
+			<div>
+				<p>{{ article.content|safe }}</p>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>	
+{% else %}
+	<p>Não há artigos</p>
+{% endif %}
+{% endblock %}

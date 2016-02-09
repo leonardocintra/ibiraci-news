@@ -19,7 +19,7 @@ class Author(models.Model):
 		return self.name
 
 
-class Artigo(models.Model):
+class Article(models.Model):
 	title = models.CharField('Título', max_length=80)
 	url = models.SlugField('URL', max_length=200, help_text='URL based in title', unique=True)
 	pub_date = models.DateField('Data publicação')	
