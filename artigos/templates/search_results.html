@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<p>Você pesquisou por: <strong>{{ query }}</strong></p>
+	{% if articles %}
+		<p>Encontrado {{ articles|length }} artigo{{ articles|pluralize }}</p>
+		<ul>
+			{% for article in articles %}
+			<li>
+				<h1><a href="/artigo/{{ article.url }}">{{ article.title|safe }}</a></h1>
+				<br	/>
+				<span>{{ article.pub_date }}</span>
+				<div>
+					<p>{{ article.content|safe }}</p>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Não há artigos relacionados com a sua busca.</p>
+	{% endif %}	
+{% endblock %}
+{% block back %}
+	<a href="/">Voltar</a>
+{% endblock %}

@@ -20,4 +20,15 @@ def article(request, url):
 	return render(request, 'detail.html', 
 		{'article': get_object_or_404(Article, url=url)})
 
+def form_search(request):
+	return render(request, 'search_form.html')
+
+def search(request):
+	if 'q' in request.GET and request.GET['q']:
+		q = request.GET['q']
+		articles = Article.objects.filter(title__contains=q) | Article.objects.filter(content__contains=q)
+		return render(request, 'search_results.html', {'articles': articles, 'query': q})
+	else:
+		return render(request, 'search_form.html', {'error': True })
+
 
