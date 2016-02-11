@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Pesquisa {% endblock %}
+{% block content %}
+	{% if error %}
+		<p style="color:red;">Por favor, informe um termo para pesquisa</p>
+	{% endif %}
+	
+	<form action="/search/" method="GET">
+		<input type="text" placeholder="Informe um texto" name="q"></input>
+		<input type="submit" value="Pesquisar"></input>
+	</form>
+{% endblock %}
+{% block back %}
+	<a href="/"> Voltar </a>
+{% endblock %}
