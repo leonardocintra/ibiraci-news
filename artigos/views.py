@@ -46,7 +46,7 @@ def contact(request):
 			recipient = ['emaildevleonardo@gmail.com']
 			sender = form.cleaned_data['email']
 			subject = "CONTATO - " + form.cleaned_data['name']
-			message = "Telefone: " + form.cleaned_data['phone'] + "\n MENSAGEM:" + form.cleaned_data['message'] + "\n EMAIL: " + form.cleaned_data['email']
+			message = "TELEFONE: " + form.cleaned_data['phone'] + "\n MENSAGEM:" + form.cleaned_data['message'] + "\n EMAIL: " + form.cleaned_data['email']
 			print("Enviado email para: " + sender)
 			send_mail(subject, message, sender, recipient)
 

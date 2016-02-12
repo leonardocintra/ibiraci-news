@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
+from artigos.feeds import ArticleRss
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -10,5 +12,6 @@ urlpatterns = patterns('',
     url(r'^form-search/$', 'artigos.views.form_search'),
     url(r'^search/$', 'artigos.views.search'),
     url(r'^contact', 'artigos.views.contact'),
+    url(r'^rss/(?P<url>.*)', ArticleRss()),
     url(r'^admin/', include(admin.site.urls)),
 )
