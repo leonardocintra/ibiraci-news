@@ -9,5 +9,6 @@ urlpatterns = patterns('',
     url(r'^artigo/(?P<url>[^\.]+)','artigos.views.article'),
     url(r'^form-search/$', 'artigos.views.form_search'),
     url(r'^search/$', 'artigos.views.search'),
+    url(r'^contact', 'artigos.views.contact'),
     url(r'^admin/', include(admin.site.urls)),
 )

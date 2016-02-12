@@ -5,6 +5,13 @@
 	<title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+	{% block menu %}
+		<a href="/">Home</a> | 
+		<a href="/contact/">Contato</a>
+	{% endblock %}
+	
+	<hr />
+
 	{% block content %}
 	{% endblock %}
 

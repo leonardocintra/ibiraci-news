@@ -1,6 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
+from django.core.mail import send_mail
+
 from artigos.models import Article
+from artigos.forms import FormContact
+
 
 def index(request, page=1):
 	pagination = Paginator(Article.objects.all(), 3)
@@ -16,12 +20,15 @@ def index(request, page=1):
 		'pagination': summary,
 		'page_now': page, })
 
+
 def article(request, url):
 	return render(request, 'detail.html', 
 		{'article': get_object_or_404(Article, url=url)})
 
+
 def form_search(request):
 	return render(request, 'search_form.html')
+
 
 def search(request):
 	if 'q' in request.GET and request.GET['q']:
@@ -30,5 +37,24 @@ def search(request):
 		return render(request, 'search_results.html', {'articles': articles, 'query': q})
 	else:
 		return render(request, 'search_form.html', {'error': True })
+
+
+def contact(request):
+	if request.method == "POST":
+		form = FormContact(request.POST)
+		if form.is_valid():
+			recipient = ['emaildevleonardo@gmail.com']
+			sender = form.cleaned_data['email']
+			subject = "CONTATO - " + form.cleaned_data['name']
+			message = "Telefone: " + form.cleaned_data['phone'] + "\n MENSAGEM:" + form.cleaned_data['message'] + "\n EMAIL: " + form.cleaned_data['email']
+			print("Enviado email para: " + sender)
+			send_mail(subject, message, sender, recipient)
+
+			return render(request, 'contact.html', {'form': FormContact(), "send":True })
+	else:
+		form = FormContact()
+
+	return render(request, 'contact.html', {'form': form })
+
 
 
