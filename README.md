@@ -30,4 +30,4 @@ And then just activate it:
     - Add, update and remove articles
     - Articles supports images
     - RSS Feed
-    - Users can comment on articles :speaking_head_in_silhouette: 
+    - Users can comment on articles with [Disqus](https://disqus.com/)

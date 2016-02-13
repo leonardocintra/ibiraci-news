@@ -40,6 +40,8 @@ def search(request):
 
 
 def contact(request):
+	page_url = 'contato'
+
 	if request.method == "POST":
 		form = FormContact(request.POST)
 		if form.is_valid():
@@ -50,11 +52,11 @@ def contact(request):
 			print("Enviado email para: " + sender)
 			send_mail(subject, message, sender, recipient)
 
-			return render(request, 'contact.html', {'form': FormContact(), "send":True })
+			return render(request, 'contact.html', {'form': FormContact(), 'send':True, 'page_url': page_url })
 	else:
 		form = FormContact()
 
-	return render(request, 'contact.html', {'form': form })
+	return render(request, 'contact.html', {'form': form, 'page_url': page_url })
 
 
 
