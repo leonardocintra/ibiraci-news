@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>{% block title %}{% endblock %}</title>
+	<meta chartset="utf-8"/>
+	<title>Noticia - {% block title%} Artigo {% endblock %}</title>
+	{% block style %}
+		<link rel="stylesheet" type="text/css" href="/media/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/media/css/blog.css">
+	{% endblock %}
+	{% block scripts %}
+		<script type="text/javascript" src="/media/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/media/js/jquery-2.1.0.min.js"></script>
+	{% endblock %}
 </head>
 <body>
 	{% block menu %}
-		<a href="/">Home</a> | 
-		<a href="/contact/">Contato</a> |
-		<a href="/rss/">RSS</a>
+		<div class="blog-masthead" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<nav class="blog-nav">
+						<a class="blog-nav-item active" href="/">Home</a>
+						<a class="blog-nav-item" href="/contato/">Contato</a>
+						<a class="blog-nav-item" href="/sobre/">Sobre</a>
+						<a class="blog-nav-item" href="/rss/artigos/">RSS</a>	
+					</nav>
+				</div>
+				<div class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right" role="form" action="/pesquisa/" method="GET">
+						<div class="form-group">
+							<input type="text" placeholder="Pesquisa" class="form-control" name="q" />
+						</div>
+						<button type="submit" class="btn btn-success">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	{% endblock %}
 	
-	<hr />
+	<div class="container">
+		<div class="blog-header">
+			<h1 class="blog-title"> Site de Noticias </h1>
+			<p class="lead blog-description"> Exemplo de um site de noticias</p>
+		</div>
 
-	{% block content %}
-	{% endblock %}
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				{% block content %}
+				{% endblock %}
 
-	{% block back %}
-	{% endblock %}
+				{% block back %}
+				{% endblock %}
+			</div>
+		</div>
+		<footer>
+			Desenvolvido por Leonardo Nascimento Cintra - leonardo.ncintra@outlook.com
+		</footer>
+	</div>
 </body>
 </html>

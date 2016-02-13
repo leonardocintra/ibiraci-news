@@ -5,12 +5,10 @@
 <article>
 	<header>
 		<h1>{{ article.title|safe }}</h1>
-		<div>
+		<p class="blog-post-meta">
 			<time pubdate>{{ article.pub_date }}</time>
-			<address>
-				Por <a rel="author" href="#">{{ article.authors.all }}</a>
-			</address>
-		</div>
+			Por <a rel="author" href="#">{{ article.authors.all }}</a>
+		</p>
 	</header>
 	<div>
 		<p>
