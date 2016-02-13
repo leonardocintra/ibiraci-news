@@ -23,3 +23,11 @@ We recommend and support the usage of **virtualenv**. All you need to do is crea
 And then just activate it:
 
     source venv/bin/activate
+
+
+### Usage
+
+    - :open_file_folder: Add, update and remove articles
+    - :camera: Articles supports images
+    - :link: RSS Feed
+    - :loudspeaker: Users can comment on articles :speaking_head_in_silhouette: 
