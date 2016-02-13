@@ -5,16 +5,6 @@
 	{% if error %}
 		<p style="color:red;">Por favor, informe um termo para pesquisa</p>
 	{% endif %}
-	<div class="form-horizontal">
-		<form action="/search/" method="GET">
-			<div class="form-group">
-				<input type="text" placeholder="Informe um texto" name="q"></input>	
-			</div>
-			<div class="col-md-offset col-md-10 lead">
-				<button type="submit" class="btn btn-primary lead">Pesquisar</button>	
-			</div>
-		</form>
-	</div>
 {% endblock %}
 {% block back %}
 	<a href="/"> Voltar </a>

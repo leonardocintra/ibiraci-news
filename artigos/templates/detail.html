@@ -9,6 +9,7 @@
 		<h1>{{ article.title|safe }}</h1>
 		<p class="blog-post-meta">
 			<time pubdate>{{ article.pub_date }}</time>
+			<a href="/artigo/{{ article.url }}#disqus_thread">Comentarios</a>
 			Por <a rel="author" href="#">{{ article.authors|authors }}</a> de {{ article.agency }}</a>
 		</p>
 	</header>

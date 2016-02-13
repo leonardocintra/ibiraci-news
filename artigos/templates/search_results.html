@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}
 	Resultado da pesquisa
@@ -6,15 +6,15 @@
 
 {% block content %}
 	<h3>Você pesquisou por: <strong>{{ query }}</strong></h3>
-	{% if article %}
-	<h3> Encontrado {{ article|length }} artigo {{ article|pluralize }}. </h3>
+	{% if articles %}
+	<h3> Encontrado {{ articles|length }} artigo {{ articles|pluralize }}. </h3>
 	<hr />
 	{% for article in articles %}
 		<div class="blog-post">
-			<h2 class="blog-post-title"><a href="/artigo/{{ article.url }}">{{ article.titulo|safe }}</a></h2>
+			<h2 class="blog-post-title"><a href="/artigo/{{ article.url }}">{{ article.title|safe }}</a></h2>
 			<p class="blog-post-meta">{{ article.pub_date }}</p>
 			<div>
-				<p>{{ article.conteudo|safe }}</p>
+				<p>{{ article.content|safe }}</p>
 			</div>
 		</div>
 	{% endfor %}
