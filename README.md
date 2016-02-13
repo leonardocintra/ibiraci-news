@@ -27,7 +27,7 @@ And then just activate it:
 
 ### Usage
 
-    - :open_file_folder: Add, update and remove articles
-    - :camera: Articles supports images
-    - :link: RSS Feed
-    - :loudspeaker: Users can comment on articles :speaking_head_in_silhouette: 
+    - Add, update and remove articles
+    - Articles supports images
+    - RSS Feed
+    - Users can comment on articles :speaking_head_in_silhouette: 
