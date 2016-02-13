@@ -3,7 +3,7 @@
 	{% if articles %}	
 		{% for article in articles %}
 			<div class="blog-post">
-				<h2 class="blog-post-title"><a href="/artigo/{{ article.url }}">{{ article.titulo|safe }}</a></h2>
+				<h2 class="blog-post-title"><a href="/artigo/{{ article.url }}">{{ article.title|safe }}</a></h2>
 				<p class="blog-post-meta">{{ article.pub_date }}</p>
 				<div>
 					<p>{{ article.content|safe }}</p>

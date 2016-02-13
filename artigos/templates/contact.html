@@ -1,4 +1,6 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% load artigos_extras %}
 
 {% block title %}
 	Contato
@@ -34,6 +36,6 @@
 			</div>
 		</div>
 	</form>	
-	Hora local: 
+	Hora local: {% current_time "%d/%m/%Y %H:%M" %}
 	<br />
 {% endblock %}
