@@ -100,7 +100,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'emaildevleonardo@gmail.com'
 EMAIL_HOST_PASSWORD = 'julianarosarodrigues'
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 

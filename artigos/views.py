@@ -22,8 +22,9 @@ def index(request, page=1):
 
 
 def article(request, url):
+	page_url = "artigo/" + url
 	return render(request, 'detail.html', 
-		{'article': get_object_or_404(Article, url=url)})
+		{'article': get_object_or_404(Article, url=url), 'page_url': page_url })
 
 
 def form_search(request):

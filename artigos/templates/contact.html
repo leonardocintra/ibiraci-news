@@ -39,6 +39,6 @@
 	Hora local: {% current_time "%d/%m/%Y %H:%M" %}
 	<br />
 	<div>
-		{% include "includes/disqus.html"%}
+		{% include "includes/disqus.html" with page_url=page_url %}
 	</div>
 {% endblock %}
