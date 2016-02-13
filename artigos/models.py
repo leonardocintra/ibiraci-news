@@ -26,6 +26,7 @@ class Article(models.Model):
 	content = models.TextField('Conteudo da página')
 	authors = models.ManyToManyField(Author)
 	agency = models.ForeignKey(Agency)
+	featureImage = models.ImageField(upload_to='artigos/%y/%m/%d', null=True)
 
 	def __str__ (self):
 		return self.title

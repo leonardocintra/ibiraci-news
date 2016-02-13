@@ -6,6 +6,9 @@ __pycache__/
 # Data Base
 db.sqlite3
 
+# Images Articles
+media/artigos/
+
 # C extensions
 *.so
 

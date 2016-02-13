@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from django.core.mail import send_mail
+from django.conf import settings
 
 from artigos.models import Article
 from artigos.forms import FormContact
@@ -23,8 +24,12 @@ def index(request, page=1):
 
 def article(request, url):
 	page_url = "artigo/" + url
-	return render(request, 'detail.html', 
-		{'article': get_object_or_404(Article, url=url), 'page_url': page_url })
+	imagem_url = "/media/" + settings.MEDIA_URL
+	return render(request, 'detail.html', {
+		'article': get_object_or_404(Article, url=url), 
+		'page_url': page_url,
+		'media_url': imagem_url
+	})
 
 
 def form_search(request):
