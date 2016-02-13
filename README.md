@@ -27,7 +27,7 @@ And then just activate it:
 
 ### Usage
 
-    - Add, update and remove articles
-    - Articles supports images
-    - RSS Feed
-    - Users can comment on articles with [Disqus](https://disqus.com/)
+- Add, update and remove articles
+- Articles supports images
+- RSS Feed
+- Users can comment on articles with [Disqus](https://disqus.com/)
