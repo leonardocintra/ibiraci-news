@@ -13,5 +13,4 @@ urlpatterns = [
     url(r'^pesquisa/$', 'artigos.views.search'),
     url(r'^contato', 'artigos.views.contact'),
     url(r'^rss/(?P<url>.*)', ArticleRss()),
-    #url(r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]
