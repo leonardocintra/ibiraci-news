@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django.contrib.sites',
     'disqus',
+    'cloudinary',
     'artigos',
 ]
 

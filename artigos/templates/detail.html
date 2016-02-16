@@ -13,11 +13,6 @@
 			Por <a rel="author" href="#">{{ article.authors|authors }}</a> de {{ article.agency }}</a>
 		</p>
 	</header>
-	{% if article.featureImage %}
-		<div class="text-center">
-			<img src="{{ article.featureImage }}" class="img-responsive img-thumbnail">
-		</div>
-	{% endif %}
 	<div>
 		<p>
 			{{ article.content|safe }}
