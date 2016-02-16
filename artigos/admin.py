@@ -14,7 +14,7 @@ class ArticleAdmin(admin.ModelAdmin):
 	list_filter = ('pub_date', )
 	date_hierarchy = 'pub_date'
 	ordering = ('-pub_date', )
-	fields = ('title', 'url', 'pub_date', 'authors', 'agency', 'featureImage', 'content')
+	fields = ('title', 'url', 'pub_date', 'authors', 'agency', 'imageFeature', 'content')
 	prepopulated_fields = {'url': ('title', )}
 	filter_horizontal = ('authors', )
 

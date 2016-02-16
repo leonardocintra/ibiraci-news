@@ -27,6 +27,8 @@ class Article(models.Model):
 	content = models.TextField('Conteudo da página')
 	authors = models.ManyToManyField(Author)
 	agency = models.ForeignKey(Agency)
+	imageFeature = CloudinaryField('Imagem', blank=True, null=True)
+
 
 	def __str__ (self):
 		return self.title

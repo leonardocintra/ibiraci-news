@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load artigos_extras %}
+{% load cloudinary %}
 
 {% block title %} {{ article.title|safe}} {% endblock %}
 {% block content %}
@@ -13,6 +14,11 @@
 			Por <a rel="author" href="#">{{ article.authors|authors }}</a> de {{ article.agency }}</a>
 		</p>
 	</header>
+	{% if article.imageFeature %}
+		<div class="text-center">
+			{% cloudinary article.imageFeature %}
+		</div>
+	{% endif %}
 	<div>
 		<p>
 			{{ article.content|safe }}

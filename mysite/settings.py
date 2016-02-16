@@ -101,6 +101,13 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'emaildevleonardo@gmail.com'
 EMAIL_HOST_PASSWORD = 'julianarosarodrigues'
 
+# Cloudinary
+CLOUDINARY = {
+  'cloud_name': 'ibiraci-news',  
+  'api_key': '737375395976416',  
+  'api_secret': 'VA18DJaDD5aPmYQq83hu2afyRME',  
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
