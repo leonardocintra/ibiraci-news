@@ -1,4 +1,4 @@
-News - Articles
+Ibiraci News - Articles
 ================================
 
 A simple web application that allows you to uploads photos, maintain a database with references to them, list them with their metadata, and display them using various cloud-based transformations.
@@ -10,8 +10,8 @@ Run the following commands from your shell.
 
 Project cloning and dependent package installation: 
 
-    git clone https://github.com/leonardocintra/news.git
-    cd news
+    git clone https://github.com/leonardocintra/ibiraci-news.git
+    cd ibiraci-news
     pip install -r requirements.txt
 
 ### Start with virtualenv
