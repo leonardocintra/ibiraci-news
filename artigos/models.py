@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.db.models import permalink
+from cloudinary.models import CloudinaryField
 
 class Agency(models.Model):
 	name = models.CharField('Nome', max_length=50)
@@ -26,7 +27,8 @@ class Article(models.Model):
 	content = models.TextField('Conteudo da página')
 	authors = models.ManyToManyField(Author)
 	agency = models.ForeignKey(Agency)
-	featureImage = models.ImageField(upload_to='artigos/%y/%m/%d', null=True)
+	imageFeature = CloudinaryField('Imagem', blank=True, null=True)
+
 
 	def __str__ (self):
 		return self.title

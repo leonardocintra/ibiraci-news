@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django.contrib.sites',
     'disqus',
+    'cloudinary',
     'artigos',
 ]
 
@@ -100,6 +101,13 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'emaildevleonardo@gmail.com'
 EMAIL_HOST_PASSWORD = 'julianarosarodrigues'
 
+# Cloudinary
+CLOUDINARY = {
+  'cloud_name': 'ibiraci-news',  
+  'api_key': '737375395976416',  
+  'api_secret': 'VA18DJaDD5aPmYQq83hu2afyRME',  
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
@@ -118,6 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 SITE_ID = 1 # flat_pages

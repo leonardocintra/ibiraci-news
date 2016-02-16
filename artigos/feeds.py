@@ -1,5 +1,5 @@
 from django.contrib.syndication.views import Feed
-from models import Article
+from artigos.models import Article
 
 class ArticleRss(Feed):
 	title = "Ultimos artigos do site"

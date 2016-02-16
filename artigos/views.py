@@ -24,11 +24,9 @@ def index(request, page=1):
 
 def article(request, url):
 	page_url = "artigo/" + url
-	imagem_url = "/media/" + settings.MEDIA_URL
 	return render(request, 'detail.html', {
 		'article': get_object_or_404(Article, url=url), 
-		'page_url': page_url,
-		'media_url': imagem_url
+		'page_url': page_url
 	})
 
 
