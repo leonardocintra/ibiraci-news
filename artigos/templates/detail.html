@@ -16,7 +16,7 @@
 	</header>
 	{% if article.imageFeature %}
 		<div class="text-center">
-			{% cloudinary article.imageFeature %}
+			{% cloudinary article.imageFeature width=article.imageWidth height=article.imageHeight %}
 		</div>
 	{% endif %}
 	<div>

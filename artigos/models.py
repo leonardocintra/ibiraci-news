@@ -28,6 +28,8 @@ class Article(models.Model):
 	authors = models.ManyToManyField(Author)
 	agency = models.ForeignKey(Agency)
 	imageFeature = CloudinaryField('Imagem', blank=True, null=True)
+	imageWidth = models.IntegerField(default=100)
+	imageHeight = models.IntegerField(default=100)
 
 
 	def __str__ (self):
