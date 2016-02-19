@@ -2,7 +2,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -109,14 +109,14 @@ AUTH_PASSWORD_VALIDATORS = [
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'emaildevleonardo@gmail.com'
-EMAIL_HOST_PASSWORD = 'julianarosarodrigues'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'emaildevleonardo@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'julianarosarodrigues')
 
 # Cloudinary
 CLOUDINARY = {
-  'cloud_name': 'ibiraci-news',  
-  'api_key': '737375395976416',  
-  'api_secret': 'VA18DJaDD5aPmYQq83hu2afyRME',  
+  'cloud_name': os.environ.get('CLOUD_NAME', 'ibiraci-news'),  
+  'api_key': os.environ.get('API_KEY', '737375395976416'), 
+  'api_secret': os.environ.get('API_SECRET', 'VA18DJaDD5aPmYQq83hu2afyRME') 
 }
 
 # Internationalization
