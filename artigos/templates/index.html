@@ -29,4 +29,19 @@
 	<!-- PAGINADOR FIM-->
 {% endblock %}
 
+{% block marketing %}
+	<div class="panel panel-default">
+		<div class="panel-heading"> Ultimas notícias </div>
+		<div class="panel-body">
+			{% if articles %}
+				{% for article in articles %}
+					<ul>
+						<li><a href="/artigo/{{ article.url }}">{{ article.title|safe }}</a></li>
+					</ul>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
+
 

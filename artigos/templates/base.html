@@ -22,6 +22,7 @@
 						<a class="blog-nav-item" href="/contato/">Contato</a>
 						<a class="blog-nav-item" href="/sobre/">Sobre</a>
 						<a class="blog-nav-item" href="/rss/artigos/">RSS</a>	
+						{% include "includes/linkAdmin.html" %}
 					</nav>
 				</div>
 				<div class="navbar-collapse collapse">
@@ -48,10 +49,14 @@
 			<div class="col-sm-8 blog-main">
 				{% block content %}
 				{% endblock %}
-
-				{% block back %}
+			</div>
+			<div class="col-sm-4">
+				{% block marketing %}
 				{% endblock %}
 			</div>
+
+			{% block back %}
+			{% endblock %}
 		</div>
 		<footer>
 			Desenvolvido por Leonardo Nascimento Cintra - leonardo.ncintra@outlook.com
